@@ -1,6 +1,10 @@
 #include "holberton.h"
+<<<<<<< HEAD
 
 void _printf(char *format, ...)
+=======
+int _printf(const char *format, ...)
+>>>>>>> 95e733b6a12de111de40600f2177e551254bb5f9
 {
 	int i, count = 0;
 	va_list list;
