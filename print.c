@@ -1,10 +1,14 @@
 #include "holberton.h"
-<<<<<<< HEAD
 
-void _printf(char *format, ...)
-=======
+/**
+ * _printf - function main
+ *
+ *
+ *
+ *
+ */
+
 int _printf(const char *format, ...)
->>>>>>> 95e733b6a12de111de40600f2177e551254bb5f9
 {
 	int i, count = 0;
 	va_list list;
@@ -13,19 +17,35 @@ int _printf(const char *format, ...)
 
 	if (format != NULL)
 	{
-	for (i = 0; f[i] != 0; i++)
+	for (i = 0; format[i] != 0; i++)
 	{
-		if (f[i] == '%' || f[i] == '/')
+		if (format[i] != '%')
 		{
-			putchar('e');
+			count += _print_write((*format = i));
 			continue;
 		}
-		else
+		switch (format[++i])
 		{
-			_print_write(1, f+i, 1);
+		case '+':
+			count += _print_write('%');
+			break;
+		case: 'c':
+		case: 's':
+			count += get_functions(format[i], list);
+			break;
+		default:
+			if (!format[i])
+				return(-1);
+
+			count += _print_write('%');
+			count += print_write(format[i]);
+			break;
 		}
 
 	}
-	
+
 	}
+
+	va_end(list);
+	return (count);
 }
