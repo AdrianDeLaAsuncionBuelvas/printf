@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-void print(char *f)
+void puts(char *f)
 {
 	int i;
 	for (i = 0; f[i] != 0; i++)
