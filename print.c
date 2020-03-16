@@ -1,8 +1,14 @@
 #include "holberton.h"
 
-void _printf(const char *format, ...)
+void _printf(char *format, ...)
 {
-	int i;
+	int i, count = 0;
+	va_list list;
+
+	va_start(list, format);
+
+	if (format != NULL)
+	{
 	for (i = 0; f[i] != 0; i++)
 	{
 		if (f[i] == '%' || f[i] == '/')
@@ -12,18 +18,10 @@ void _printf(const char *format, ...)
 		}
 		else
 		{
-			write(1, f+i, 1);
+			_print_write(1, f+i, 1);
 		}
 
 	}
-}
-
-
-
-
-int main()
-{
-	print("Hello World%");
-
-	return 0;
+	
+	}
 }

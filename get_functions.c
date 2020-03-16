@@ -16,9 +16,9 @@ void print_all(const char * const format, ...)
 	char *str;
 
 	opc_print form_print[]= {
-		{"c", _print_char},
-		{"s", _print_str},
-		{"%", _print_pj},
+		{"%c", _print_char},
+		{"%s", _print_str},
+		{"%%", _print_pj},
 		{NULL, NULL}
 	};
 

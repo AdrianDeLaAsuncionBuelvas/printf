@@ -16,4 +16,12 @@ typedef struct print
 	(*f)();
 }opc_print;
 
+int _print_write(int c);
+
+int _print_char(va_list list);
+int _print_int(va_list list);
+int _print_float(va_list list);
+int _print_str(va_list list);
+
+
 #endif
