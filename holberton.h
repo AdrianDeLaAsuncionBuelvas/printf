@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 int _putchar(char c);
-
+void _puts(char *str);
 
 
 typedef struct print
