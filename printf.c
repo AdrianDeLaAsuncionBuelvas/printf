@@ -11,6 +11,7 @@
 int _printf(const char *format, ...)
 {
 	int i, count = 0;
+	int c;
 	va_list list;
 
 	va_start(list, format);
@@ -25,22 +26,19 @@ int _printf(const char *format, ...)
 			count += _putchar(format[i]);
 			continue;
 		}
-		switch (format[++i])
+		else
 		{
-		case '%':
-			count += _putchar('%');
-			break;
-		case 'c':
-		case 's':
-			count += get_functions(format[i], list);
-			break;
-		default:
-			if (!format[i])
-				return(-1);
+			c = get_functions(format[i + 1], list);
 
-			count += _putchar('%');
-			count += _putchar(format[i]);
-			break;
+			if (c != -1)
+			{
+				count += c;
+				i++;
+			}
+			else
+			{
+				return (c);
+			}
 		}
 
 	}

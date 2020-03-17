@@ -12,7 +12,6 @@ g *
 int get_functions(char format, va_list list)
 {
 	int i;
-	int count = 0;
 
 	opc_print form_print[]= {
 		{"c", _print_char},
@@ -20,14 +19,19 @@ int get_functions(char format, va_list list)
 		{NULL, NULL}
 	};
 
-	for (i = 0; form_print[i].opc != NULL; i++)
+	if (format == '\0')
+		return (-1);
+
+	if (format == '%')
+		return (_putchar('%'));
+
+	for (i = 0; i < 2; i++)
 		{
-			if (format == form_print[i].opc[0])
+			if (form_print[i].opc[0] == format)
 			{
-				count += form_print[i].f(list);
-				break;
+				return (form_print[i].f(list));
 			}
 
 	}
-	return (count);
+	return (_putchar('%') + _putchar(format));
 }
