@@ -24,5 +24,6 @@ int get_functions(char format, va_list);
 int _print_char(va_list list);
 int _print_str(va_list list);
 
+int _print_int (va_list list);
 
 #endif

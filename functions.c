@@ -30,3 +30,34 @@ int _print_str(va_list list)
 
 	return (i);
 }
+
+
+
+
+int _print_int(va_list list)
+{
+        int num = va_arg(list, int);
+        unsigned int n;
+        int i = 0;
+        int j = 1;
+
+        if (num < 0)
+        {
+                n = num * (-1);
+                _putchar('-');
+                i++;
+        }
+        else
+        {
+                n = num;
+        }
+        while ((n / j) > 9)
+                j *= 10;
+        while (j >= 1)
+        {
+               _putchar(((n / j) % 10) + '0');
+                j /= 10;
+                i++;
+        }
+return(j);//cambio return 
+}

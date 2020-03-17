@@ -13,7 +13,9 @@ int get_functions(char format, va_list list)
 
 	opc_print form_print[] = {
 		{"c", _print_char},
-		{"s", _print_str}
+		{"s", _print_str},
+		{"d", _print_int},
+                {"i", _print_int}
 	};
 
 	if (format == '\0')
@@ -22,7 +24,7 @@ int get_functions(char format, va_list list)
 	if (format == '%')
 		return (_putchar('%'));
 
-	for (i = 0; i < 2; i++)
+	for (i = 0; i < 4; i++)//cambio 4 por 2
 		{
 		if (form_print[i].opc[0] == format)
 		{
