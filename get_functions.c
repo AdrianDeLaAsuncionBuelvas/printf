@@ -1,19 +1,17 @@
 #include "holberton.h"
 
 /**
- *
- *
-g *
- *
- *
- *
+ * get_functions- look for the function
+ * @format: type
+ * @list: variadic
+ * Return: function
  */
 
 int get_functions(char format, va_list list)
 {
 	int i;
 
-	opc_print form_print[]= {
+	opc_print form_print[] = {
 		{"c", _print_char},
 		{"s", _print_str}
 	};
@@ -26,11 +24,10 @@ int get_functions(char format, va_list list)
 
 	for (i = 0; i < 2; i++)
 		{
-			if (form_print[i].opc[0] == format)
-			{
-				return (form_print[i].f(list));
-			}
-
+		if (form_print[i].opc[0] == format)
+		{
+			return (form_print[i].f(list));
+		}
 	}
 	return (_putchar('%') + _putchar(format));
 }

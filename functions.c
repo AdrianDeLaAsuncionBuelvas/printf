@@ -3,14 +3,18 @@
 /**
  * _print_char - print Character
  * @list: variadic function
+ *  Return: char
  */
-
 int _print_char(va_list list)
 {
 	return (_putchar(va_arg(list, int)));
 }
 
-
+/**
+ * _print_str- print str
+ * @list: variadic function
+ * Return: str
+ */
 int _print_str(va_list list)
 {
 	char *str;

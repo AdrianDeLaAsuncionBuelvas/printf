@@ -2,10 +2,8 @@
 
 /**
  * _printf - function main
- *
- *
- *
- *
+ * @format: variadic
+ * Return: function
  */
 
 int _printf(const char *format, ...)
