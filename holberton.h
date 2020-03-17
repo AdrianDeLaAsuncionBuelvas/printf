@@ -10,11 +10,12 @@
 typedef struct print
 {
 	char *opc;
-	int (*f)(va_list list);
+	int (*f)(va_list);
 } opc_print;
 
 int _putchar(char c);
-int get_functions(char format, va_list list)
+int _printf(const char *format, ...);
+int get_functions(char format, va_list list);
 int _print_char(va_list list);
 int _print_str(va_list list);
 /*
