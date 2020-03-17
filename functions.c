@@ -10,23 +10,19 @@ int _print_char(va_list list)
 	return (_putchar(va_arg(list, int)));
 }
 
-/**
- * _print_str - print String
- * @list: variadic function
- */
 
 int _print_str(va_list list)
 {
-	char *s;
-	int i;
+	char *str;
+	int i = 0;
 
-	s = va_arg(list, char *);
+	str = va_arg(list, char *);
 
-	if (!s)
-		s = "(null)";
+	if (!str)
+		str = "(null)";
 
-	for (i = 0; (*s + i); i++)
-		_putchar((*s + i));
+	while (str[i] != '\0')
+		i += _putchar(str[i]);
 
 	return (i);
 }

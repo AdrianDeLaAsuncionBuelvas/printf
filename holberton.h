@@ -15,7 +15,7 @@ typedef struct print
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int get_functions(char format, va_list list);
+int get_functions(char format, va_list);
 int _print_char(va_list list);
 int _print_str(va_list list);
 /*

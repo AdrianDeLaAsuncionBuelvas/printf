@@ -15,8 +15,7 @@ int get_functions(char format, va_list list)
 
 	opc_print form_print[]= {
 		{"c", _print_char},
-		{"s", _print_str},
-		{NULL, NULL}
+		{"s", _print_str}
 	};
 
 	if (format == '\0')
