@@ -21,24 +21,24 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			count += _print_write((*format = i));
+			count += _putchar(format[i]);
 			continue;
 		}
 		switch (format[++i])
 		{
-		case '+':
-			count += _print_write('%');
+		case '%':
+			count += _putchar('%');
 			break;
-		case: 'c':
-		case: 's':
+		case 'c':
+		case 's':
 			count += get_functions(format[i], list);
 			break;
 		default:
 			if (!format[i])
 				return(-1);
 
-			count += _print_write('%');
-			count += print_write(format[i]);
+			count += _putchar('%');
+			count += _putchar(format[i]);
 			break;
 		}
 
