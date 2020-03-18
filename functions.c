@@ -37,7 +37,7 @@ return (i);
 
 int _print_int(va_list list)
 {
-iint num = va_arg(list, int);
+int num = va_arg(list, int);
 unsigned int n;
 int i = 0;
 int j = 1;
