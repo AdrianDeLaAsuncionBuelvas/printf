@@ -59,5 +59,5 @@ _putchar(((n / j) % 10) + '0');
 j /= 10;
 i++;
 }
-return (j);
+return (i);
 }
