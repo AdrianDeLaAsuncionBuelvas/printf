@@ -11,7 +11,7 @@
     va_arg (man 3 va_arg)
 
 ## files
-_putchar.c
+### _putchar.c
 in this fiile threre is a function for print character
 ### functions.c
 int _print_int (int num) print number and return length. <br/>
