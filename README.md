@@ -14,21 +14,21 @@
 _putchar.c
 in this fiile threre is a function for print character
 ### functions.c
-int _print_int (int num) print number and return length
-int _print_char (va_list list) print character and return (_putchar (va_arg (list, int)));
-int _print_str (va_list list) print string and return lentgth
+int _print_int (int num) print number and return length. <br/>
+int _print_char (va_list list) print character and return (_putchar (va_arg (list, int))); <br/>
+int _print_str (va_list list) print string and return lentgth. <br/>
 
 ### functions1.c
-_print_binary - function that receives a number for convert to binary 
+_print_binary - function that receives a number for convert to binary. <br/>
 
 ### get_functions.c
-get_functions (char format, va_list list) - look for the function
+get_functions (char format, va_list list) - look for the function. <br/>
 
 ### holberton.h
-it has the prototypes of the functions and the structure
+it has the prototypes of the functions and the structure. <br/>
 
 ### man_3_printf
-man page _print
+man page _print.
 
 ### printf.c
-int _printf (const char * format, ...) receives the arguments and calls the functions
+int _printf (const char * format, ...) receives the arguments and calls the functions.
