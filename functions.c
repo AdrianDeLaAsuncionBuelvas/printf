@@ -30,3 +30,6 @@ int _print_str(va_list list)
 
 	return (i);
 }
+
+
+ 
