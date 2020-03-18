@@ -18,7 +18,7 @@ int _print_binary(int n)
 
 	if (n / 2)
 	{
-		count /= _print_binary(n / 2);
+		count += _print_binary(n / 2);
 		count += _putchar((n % 2) + '0');
 	}
 	else
