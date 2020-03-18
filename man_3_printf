@@ -1,0 +1,17 @@
+.TH _printf "17 March 2015" "1.0" "_printf man page"
+.SH NAME
+.B _printf
+- Shows standard output on screen.
+.SH SYNOPSIS
+.B _prinf(FORMAT + STRING, ARGUMENT).
+.SH DESCRIPTION
+.B Function that allows the printing of array characters, number, and string
+.SH OPTIONS
+.B %d --print Whole numbers.
+.B %i --print Whole numbers.
+.B %% --print percent sign.
+.B %c --print character.
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Adrian De La Asuncion Buelvas and Diego Vivius.
