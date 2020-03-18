@@ -38,4 +38,5 @@ int _print_binary(int n)
 int _print_intb(va_list list)
 {
 	return (_print_binary(va_arg(list, int)));
+	va_end(list);
 }
