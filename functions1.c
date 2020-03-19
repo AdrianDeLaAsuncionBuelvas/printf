@@ -9,11 +9,11 @@
 int _print_intb(va_list list)
 {
 	int resto[BUFFER];
-	int count, n, j = 0;
+	int count, j = 0;
 	int ret = 0;
 
 	count = 0;
-	n = va_arg(list, int);
+	int n = va_arg(list, int);
 
 	while (n > 0)
 	{
@@ -21,10 +21,11 @@ int _print_intb(va_list list)
 		n /= 2;
 		++count;
 	}
-	for (j = count - 1; j >= 0;)
+	j = count - 1;
+	while (j >= 0)
 	{
+		ret = _putchar(resto[j] + '0');
 		--j;
-		 ret = _putchar(resto[j] + '0');
 	}
 
 	return (ret);
