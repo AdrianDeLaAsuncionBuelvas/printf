@@ -1,19 +1,20 @@
 #include "holberton.h"
 
 /**
- * _print_intb - the unsigned int argument is converted to binary
- * @list: variadic funtions
- * Return: list
+ * _print_binary - the unsigned int argument is converted to binary
+ * @n: get a number
+ * Return: ret
  */
 
-int _print_intb(va_list list)
+int _print_binary(int n)
 {
 	int resto[BUFFER];
-	int count, j = 0;
-	int ret = 0;
+	int count, j;
+	int ret;
 
+	j = 0;
+	ret = 0;
 	count = 0;
-	int n = va_arg(list, int);
 
 	while (n > 0)
 	{
@@ -21,12 +22,23 @@ int _print_intb(va_list list)
 		n /= 2;
 		++count;
 	}
-	j = count - 1;
-	while (j >= 0)
+
+	for (j = count - 1; j >= 0; --j)
 	{
 		ret = _putchar(resto[j] + '0');
-		--j;
 	}
 
 	return (ret);
+}
+
+/**
+ * _print_intb - the unsigned int argument is converted to binary
+ * @list: variadic funtions
+ * Return: list
+ */
+
+int _print_intb(va_list list)
+{
+	return (_print_binary(va_arg(list, int)));
+	va_end(list);
 }
