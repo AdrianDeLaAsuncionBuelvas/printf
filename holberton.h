@@ -1,6 +1,5 @@
 #ifndef PRINTF_H
 #define PRINTF_H
-#define BUFFER 1024
 
 #include <stdio.h>
 #include <stdlib.h>

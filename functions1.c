@@ -8,27 +8,22 @@
 
 int _print_binary(int n)
 {
-	int resto[BUFFER];
-	int count, j;
-	int ret;
+int count  = 0;
 
-	j = 0;
-	ret = 0;
-	count = 0;
-
-	while (n > 0)
+	if (n < 0)
 	{
-		resto[count] = n % 2;
-		n /= 2;
-		++count;
+		return (-1);
 	}
-
-	for (j = count - 1; j >= 0; --j)
+	if (n / 2)
 	{
-		ret = _putchar(resto[j] + '0');
+		count += _print_binary(n / 2);
+		count += _putchar((n % 2) + '0');
 	}
-
-	return (ret);
+	else
+	{
+		count += _putchar(n + '0');
+	}
+	return (count);
 }
 
 /**
