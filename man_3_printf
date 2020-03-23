@@ -12,7 +12,7 @@
 .B %% --print percent sign.
 .B %c --print character.
 .SH SEE ALSO
-.B print(1); 
+.B print(1);
 .SH BUGS
 No known bugs.
 .SH AUTHOR

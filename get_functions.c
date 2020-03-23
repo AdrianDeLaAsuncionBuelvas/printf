@@ -16,7 +16,7 @@ int get_functions(char format, va_list list)
 		{"s", _print_str},
 		{"d", _print_int},
 		{"i", _print_int},
-		{"b", _print_intb}
+		{"b", _print_binary}
 	};
 
 	if (format == '\0')
